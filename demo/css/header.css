@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    position: relative;
+    background: #33cccc;
+    background-size: cover;
+}
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+}
+/*nav-menu*/
+.header__list{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px 16px;
+}
+li{
+    list-style: none;
+}   
+a{
+    text-decoration: none;
+}
+.has-submenu{
+    position: relative;
+}
+
+/*Hover*/
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header__list-item{
+    position: relative;
+    padding: 20px;
+}
+.header__list-item .header__link::after{
+    position: absolute;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: 40px;
+    left: 0px;
+    content: "";
+    width: 0%;
+    height: 5%;
+    background-color: black;
+    transition: all .5s; 
+}
+.header__link:hover::after{
+    width: 100%;
+}
+
+/*dropdown list*/
+.has-submenu:hover .dropdown-menu-list{
+    display: flex;
+    top: 100%;  
+    border: 1px solid white;
+    flex-direction: row;
+    justify-content: space-evenly;
+    left: -365px;
+}
+.dropdown-menu-list{
+    padding: 0;
+    width: 780px;
+    height: 100px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    background-color: white;
+    box-shadow: -4px 4px 1px 1px rgb(42 182 169);
+}
+.header__list-item{
+    position: relative;
+
+}
+.header__list-item a{
+    display: block;
+}
+.dropdown-menu-item{
+    flex-basis: 200px;
+}
+.dropdown-menu-item a{
+    display: block;
+}
+.submenu-menu-item:hover{
+    background-color: aqua;
+}
+.header__list-item a:active{
+    background-color: rgb(17, 109, 109);
+}
+/*SEARCH*/
+.search{
+    display: flex;
+    border-radius: 50px;
+    padding: 0px;
+    transition: all 3s ease;
+}
+.search input[type="text"]{
+    outline: none;
+    border: none;
+    width: 0;
+    transition: all 1s ease;
+    font-weight: 700;
+    background: none;
+}
+.search a .icon{
+    padding: 5px;
+    margin: 1px;
+}
+.search:hover{
+    border: 2px solid black;
+}
+.search:hover > a .icon{
+    color: black;
+} 
+.search:hover > .search-text{
+    width: 120px;
+    padding-left: 10px;
+    opacity: 0.5;
+    background: none;
+    color: #012121;
+}
+.search:active > .search-text{
+    color: darkcyan;
+}
+
+.dropdown-menu-link{
+    text-align: center;
+}
+
+.header__link{
+    color: #006363;
+    font-size: 17px;
+    font-weight: bold;
+}
+.header__link:hover{
+    color: #e0e0e0;
+}
+li h3{
+    color: #155555;
+    text-align: center;
+    padding: 1px;
+}
+.sel{
+    color: white;
+}
